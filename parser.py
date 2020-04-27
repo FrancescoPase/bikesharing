@@ -4,8 +4,10 @@ from datetime import datetime
 for year in range(14,15):
     for month in range(1,9):
 
-        filename = './data/20' + str(year) + '-0'+ str(month) + ' - Citi Bike trip data.csv'
-        output = './parsed/data_customer' + str(year) + '0' + str(month) +'.csv'
+        filename = './data/20' + str(year) + '-0'+ str(month) + \
+                   ' - Citi Bike trip data.csv'
+        output = './parsed/data_customer' + str(year) + '0' + str(month) +\
+                 '.csv'
         useful = [1, 0, 3, 7, 11, 13, 14]
 
         with open(filename, 'rb') as csvin:

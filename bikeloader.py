@@ -32,7 +32,7 @@ class BikeLoader:
         
     def get_demand(self, station, t):
         value = self.bikes[station].get(float(t))
-        if (value):
+        if value:
             return value
         else:
             return [0, 0]
