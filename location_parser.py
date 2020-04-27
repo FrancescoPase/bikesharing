@@ -4,7 +4,7 @@ from datetime import datetime
 for year in range(20, 21):
     for month in range(3, 4):
 
-        filename = './data/JC-20' + str(year) + '0' + str(month) + \
+        filename = './data/20' + str(year) + '0' + str(month) + \
                    '-citibike-tripdata.csv'
         output = './parsed/local_' + str(year) + '0' + str(month) + '.csv'
         useful = [3, 5, 6, 7, 9, 10]
