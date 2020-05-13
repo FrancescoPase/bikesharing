@@ -9,3 +9,4 @@ NY: Citi Bike Daily Ridership [Data](https://www.citibikenyc.com/system-data)
 
 NY: MTA Metro turnstile [Data](http://web.mta.info/developers/turnstile.html)
 
+NY: Covid-19 Zip Code [Data](https://github.com/nychealth/coronavirus-data)
