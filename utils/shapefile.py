@@ -60,7 +60,7 @@ def plot_map(sf, x_lim=None, y_lim=None, figsize=(11, 9)):
         plt.ylim(y_lim)
 
 
-def plot_map_fill(id, sf, x_lim=None, y_lim=None, figsize=(11, 9), color='r'):
+def plot_map_fill(ids, sf, cols, x_lim=None, y_lim=None, figsize=(12,8)):
     """
     Plot map with lim coordinates
     """
@@ -74,14 +74,19 @@ def plot_map_fill(id, sf, x_lim=None, y_lim=None, figsize=(11, 9), color='r'):
         y = [i[1] for i in shape.shape.points[:]]
         ax.plot(x, y, 'k')
 
-    shape_ex = sf.shape(id)
-    x_lon = np.zeros((len(shape_ex.points), 1))
-    y_lat = np.zeros((len(shape_ex.points), 1))
-    for ip in range(len(shape_ex.points)):
-        x_lon[ip] = shape_ex.points[ip][0]
-        y_lat[ip] = shape_ex.points[ip][1]
-    ax.fill(x_lon, y_lat, color)
+    i = 0
+    for id in ids:
+        shape_ex = sf.shape(id)
+        x_lon = np.zeros((len(shape_ex.points), 1))
+        y_lat = np.zeros((len(shape_ex.points), 1))
+        for ip in range(len(shape_ex.points)):
+            x_lon[ip] = shape_ex.points[ip][0]
+            y_lat[ip] = shape_ex.points[ip][1]
+        ax.fill(x_lon, y_lat, cols[i])
 
-    if (x_lim is not None) & (y_lim is not None):
-        plt.xlim(x_lim)
-        plt.ylim(y_lim)
+        if (x_lim is not None) & (y_lim is not None):
+            plt.xlim(x_lim)
+            plt.ylim(y_lim)
+
+        i += 1
+    return ax
