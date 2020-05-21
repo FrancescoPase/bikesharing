@@ -82,7 +82,7 @@ def plot_map_fill(ids, sf, cols, x_lim=None, y_lim=None, figsize=(12,8)):
         for ip in range(len(shape_ex.points)):
             x_lon[ip] = shape_ex.points[ip][0]
             y_lat[ip] = shape_ex.points[ip][1]
-        ax.fill(x_lon, y_lat, cols[i])
+        ax.fill(x_lon, y_lat, cols[i], )
 
         if (x_lim is not None) & (y_lim is not None):
             plt.xlim(x_lim)
