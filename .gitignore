@@ -130,8 +130,13 @@ dmypy.json
 
 *.html
 plots/
+imgs/
+.idea/
+.ipynb_checkpoints/
 
 .idea/
 data/
 parsed/
 graphs/
+plots/
+graphs/	
