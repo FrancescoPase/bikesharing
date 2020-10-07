@@ -1,6 +1,6 @@
-# Bikesharing
+# Bike Sharing and Urban Mobility in a Post-Pandemic World
 
-Analysis of NY Bike Sharing serivce during the Covid-19 pandemic.
+Analysis of NY Bike Sharing serivce during the Covid-19 pandemic. This is the code used to generate the analysis reported in the paper "Bike Sharing and Urban Mobility in a Post-Pandemic World".
 
 
 ## Data
